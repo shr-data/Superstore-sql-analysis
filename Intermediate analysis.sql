@@ -5,6 +5,7 @@ FROM superstore
 GROUP BY `Customer Name`
 ORDER BY total_sales DESC
 LIMIT 10;
+
 SELECT State,ROUND(SUM(Sales),2) as total_sales
 FROM superstore
 GROUP BY State
@@ -13,6 +14,7 @@ SELECT `Ship Mode`,ROUND(SUM(Sales),2) as total_sales,ROUND(SUM(Profit),2) as to
 FROM superstore
 GROUP BY `Ship Mode`
 ORDER BY total_sales DESC;
+
 SELECT  
     DATE_FORMAT(
         STR_TO_DATE(`Order Date`, '%m/%d/%Y'),
